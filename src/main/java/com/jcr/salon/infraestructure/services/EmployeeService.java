@@ -18,9 +18,9 @@ public class EmployeeService implements IEmployeeService  {
   }
 
   @Override
-  public EmployeeResponse delete(UUID id) {
+  public void  delete(UUID id) {
     
-    return null;
+    
   }
 
   @Override
@@ -36,7 +36,7 @@ public class EmployeeService implements IEmployeeService  {
   }
 
   @Override
-  public EmployeeResponse update(EmployeeRequest request) {
+  public EmployeeResponse update(EmployeeRequest request  , UUID id) {
     
     return null;
   }

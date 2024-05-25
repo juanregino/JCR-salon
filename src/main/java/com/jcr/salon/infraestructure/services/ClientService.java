@@ -18,9 +18,9 @@ public class ClientService implements IClientService {
   }
 
   @Override
-  public ClientResponse delete(UUID id) {
+  public void delete(UUID id) {
     
-    return null;
+    
   }
 
   @Override
@@ -36,7 +36,7 @@ public class ClientService implements IClientService {
   }
 
   @Override
-  public ClientResponse update(ClientRequest request) {
+  public ClientResponse update(ClientRequest request, UUID id) {
     
     return null;
   }

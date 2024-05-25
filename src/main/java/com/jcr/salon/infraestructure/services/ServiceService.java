@@ -18,9 +18,9 @@ public class ServiceService implements IServiceService {
   }
 
   @Override
-  public ServiceResponse delete(UUID id) {
+  public void delete(UUID id) {
     
-    return null;
+    
   }
 
   @Override
@@ -36,7 +36,7 @@ public class ServiceService implements IServiceService {
   }
 
   @Override
-  public ServiceResponse update(ServiceRequest request) {
+  public ServiceResponse update(ServiceRequest request, UUID id) {  
     
     return null;
   }

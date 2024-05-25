@@ -20,5 +20,7 @@ public class AppointmentResponse {
   private Integer duration;
   private String comment;
   private ClientBasicResponse client;
+  private ServiceResponse service;
+  private EmployeeResponse employee;    
 
 }
