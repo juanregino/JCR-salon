@@ -1,7 +1,7 @@
 package com.jcr.salon.utils.enums;
 
 public enum Role {
-  ADMIN,
+    ADMIN,
     EMPLOYEE,
     CLIENT
 }

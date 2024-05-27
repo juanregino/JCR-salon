@@ -12,7 +12,7 @@ import com.jcr.salon.domain.entities.Appointment;
 @Repository
 public interface AppointmentRepository extends JpaRepository<Appointment, UUID> {  
   
-@Query(value = "SELECT a FROM appointment a JOIN FETCH a.client c WHERE c.id = :idClient")
+// @Query(value = "SELECT a FROM appointment a JOIN FETCH a.client c WHERE c.id = :idClient")
    public Optional<Appointment> findByClientId(UUID idClient);
    
 }
