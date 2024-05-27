@@ -1,5 +1,6 @@
 package com.jcr.salon.api.dto.response;
 
+import java.time.LocalDateTime;
 import java.util.UUID;
 
 import lombok.AllArgsConstructor;
@@ -12,7 +13,7 @@ import lombok.NoArgsConstructor;
 @Builder
 public class AppointmentBasicResponse {
   private UUID id;
-  private String date;
+  private LocalDateTime date;
   private Integer duration;
   private String comment;
   private ServiceResponse service;

@@ -60,7 +60,7 @@ public class AppointmentService implements IAppointmentService {
   @Override
   public void delete(UUID id) {
     this.appointmentRepository.deleteById(id);
- ;
+ 
   }
 
   @Override

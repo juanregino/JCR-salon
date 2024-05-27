@@ -18,5 +18,5 @@ public class ClientResponse {
   private String lastName;
   private String phone;
   private String email;
-  private List<AppointmentResponse> appointments; 
+  private List<AppointmentBasicResponse> appointments; 
 }
