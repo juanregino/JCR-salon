@@ -15,4 +15,40 @@ spring:
     show-sql: true
   application:
     name: JCR-Salon
-  
+
+# email:
+
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: pachoregino2001@gmail.com
+    password: krkiteozoxxockat
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+            required: true
+          ssl:
+            enable: false
+            required: false
+
+
+#             var transport = nodemailer.createTransport({
+#   host: "sandbox.smtp.mailtrap.io",
+#   port: 2525,
+#   auth: {
+#     user: "73b7be50601c1e",
+#     pass: "********12f2"
+#   }
+# });
+
+# var transport = nodemailer.createTransport({
+#   host: "sandbox.smtp.mailtrap.io",
+#   port: 2525,
+#   auth: {
+#     user: "73b7be50601c1e",
+#     pass: "6f2c7a254f12f2"
+#   }
+# });

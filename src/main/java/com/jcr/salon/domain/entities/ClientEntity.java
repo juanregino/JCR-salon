@@ -37,8 +37,11 @@ public class ClientEntity {
   private String phone;
   @Column(length = 100 , nullable = false) 
   private String email;
+  
 
+  //se hace como una relacion many to one , lo unico es que la llave debe ser unica
   @OneToOne(fetch = FetchType.LAZY)
+  //Como client va a ser la entidad debil por eso se le coloca el join column
   @JoinColumn(name = "user_id" ,referencedColumnName = "id")
   private User user;
 
@@ -50,4 +53,6 @@ public class ClientEntity {
              cascade = CascadeType.ALL, 
              orphanRemoval = false)
   private List<Appointment> appointments;
+
+  
 }

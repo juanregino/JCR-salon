@@ -31,7 +31,7 @@ public class ServiceController {
    @Autowired
    private final IServiceService serviceService;
 
-   @GetMapping
+   @GetMapping(path = "/public/get")
    public ResponseEntity<Page<ServiceResponse>> getAll(
     @RequestParam(defaultValue = "1") int page, 
     @RequestParam(defaultValue = "10")int size, 

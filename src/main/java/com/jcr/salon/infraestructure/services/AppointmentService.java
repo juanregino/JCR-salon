@@ -1,5 +1,6 @@
 package com.jcr.salon.infraestructure.services;
 
+import java.util.Objects;
 import java.util.UUID;
 
 import org.springframework.beans.BeanUtils;
@@ -24,6 +25,7 @@ import com.jcr.salon.domain.repositories.ClientRepository;
 import com.jcr.salon.domain.repositories.EmployeeRepository;
 import com.jcr.salon.domain.repositories.ServiceRepository;
 import com.jcr.salon.infraestructure.abstract_services.IAppointmentService;
+import com.jcr.salon.infraestructure.helpers.EmailHelper;
 import com.jcr.salon.utils.enums.SortType;
 
 import lombok.RequiredArgsConstructor;
@@ -39,6 +41,8 @@ public class AppointmentService implements IAppointmentService {
   private final ClientRepository clientRepository;  
   @Autowired
   private final AppointmentRepository appointmentRepository;
+  @Autowired
+  private final EmailHelper emailHelper;
 
   @Override
   public AppointmentResponse create(AppointmentRequest request) {
@@ -51,7 +55,9 @@ public class AppointmentService implements IAppointmentService {
     appointment.setService(service);
     appointment.setEmployee(employee);
 
-    
+    if(Objects.nonNull(client.getEmail())){
+      this.emailHelper.sendEmail(client.getEmail(), client.getName(), appointment.getDate(), employee.getName());
+    }    
 
     return this.toResponse(this.appointmentRepository.save(appointment));
 

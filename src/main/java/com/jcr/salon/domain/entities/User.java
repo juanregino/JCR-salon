@@ -41,6 +41,8 @@ public class User implements UserDetails {
 
   @OneToOne(mappedBy = "user")
   private ClientEntity client;
+
+  //Como user es la fuerte solo se le pone la anotacion sin el JoinColumn
   @OneToOne(mappedBy = "user")
   private Employee employee;
 
